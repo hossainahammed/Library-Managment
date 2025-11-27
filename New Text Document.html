@@ -1,0 +1,481 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Animated Login Page</title>
+    <style>
+       /* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap'); */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #111;
+        }
+
+        .square {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .square i {
+            position: absolute;
+            inset: 0;
+            border: 2px solid #fff;
+            transition: 0.5s;
+        }
+
+        .square i:nth-child(1) {
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            animation: animate 6s linear infinite;
+        }
+
+        .square i:nth-child(2) {
+            border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+            animation: animate 4s linear infinite;
+        }
+
+        .square i:nth-child(3) {
+            border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+            animation: animate2 10s linear infinite;
+        }
+
+        .square:hover i {
+            border: 6px solid var(--clr);
+            filter: drop-shadow(0 0 20px var(--clr));
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .login {
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .login h2 {
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .login .inputBx {
+            position: relative;
+            width: 100%;
+        }
+
+        .login .inputBx input {
+            position: relative;
+            width: 100%;
+            padding: 12px 20px;
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 40px;
+            font-size: 1.2em;
+            color: #fff;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .login .inputBx input[type="submit"] {
+            width: 100%;
+            background: #0078ff;
+            background: linear-gradient(45deg, #ff357a, #fff172);
+            border: none;
+            cursor: pointer;
+        }
+
+        .login .inputBx input::placeholder {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .login .links {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .login .links a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square">
+        <i style="--clr:#5c33ff;"></i>
+        <i style="--clr:#F700FF;"></i>
+        <i style="--clr:#b529ff;"></i>
+        <div class="login">
+            <h2>Login</h2>
+            <div class="inputBx">
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="inputBx">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="inputBx">
+                <input type="submit" value="Sign in">
+            </div>
+            <div class="links">
+                <a href="#">Forget Password</a>
+                <a href="#">Signup</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+     
+    <link rel="stylesheet" href="Style.css"/>
+    <link rel="stylesheet" href="font/font.css"/> 
+
+
+
+     <link rel ="stylesheet"href="Library Management frontpage .css"/>
+
+     <link rel="icon" href="image/favicon-32x32.png"type="image/png"/>
+     <link rel="shortcut icon" href="image/favicon.ico"/>
+</head>
+<body>
+    
+    
+
+ 
+<div id = "wrapper" >   
+    <header>
+        
+     <!-- <div id ="header"> -->
+
+          <div class="logo"> 
+                          
+             <img src="image/library_logo.jpg" width="" height=""/>
+         </div>
+
+
+         <div class="marquee-container">
+            <div class="marquee">
+                <h1> ......Welcome To Daffodil International University Library Management System......</h1>
+            </div>
+        </div>
+        
+     
+        <div class="login-dropdown">
+            <div class="login-button" onclick="toggleLoginForm()">LOGIN</div>
+            <div class="login-dropdown-content" id="loginForm">
+                <input type="text" placeholder="ID number">
+                <div class="password-container">
+                    <input type="password" placeholder="Password" id="passwordInput">
+                    <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                    <label for="showPassword">Show Password</label>
+                </div>
+              <!--   <input type="password" placeholder="Password">-->
+                <button type="button" class="reset-button" onclick="resetForm()">Reset</button>
+                <button onclick="login()">Submit</button>
+            </div>
+        </div>
+     
+    
+
+    </header>
+
+ 
+        <nav>
+            <div id ="nav">
+                
+                <ul>
+                  
+                    <li> <a href="#">Resources&raquo;</a>
+                        <ul>
+                            
+                            <div class="scrollbar1" id="style-default1">
+                                <div class="force-overflow1"> 
+                               
+                            <li><a href="#">CSE &raquo;</a> 
+                               <ul>
+                               
+                                    <div class="scrollbar" id="style-default">
+                                        <div class="force-overflow"> 
+                                            <li><a href="http://www.northsouth.edu/">North South University</a></li>
+                                            <li><a href="https://www.bracu.ac.bd/">Brac University &raquo;</a>
+                                            <li><a href="https://www.aiub.edu/">AIUB &raquo;</a></li> 
+                                            <li><a href="https://www.aust.edu/">AUST &raquo;</a> 
+                                            <li><a href="http://www.iub.edu.bd/">IUB &raquo;</a></li>
+                                            <li><a href="https://www.ewubd.edu/">East West University &raquo;</a> </li>
+                                            <li><a href="https://www.uiu.ac.bd/">United International University &raquo;</a>
+                                            <li><a href="https://daffodilvarsity.edu.bd/">Daffodil International University &raquo;</a></li>
+                                            <li><a href="https://www.uap-bd.edu/"> University of Asia Pasific &raquo;</a> </li> 
+                                            <li><a href="https://iubat.edu/">IUBAT University</a></li>
+                                            <li><a href="https://green.edu.bd/">Green University </a></li>
+                                            <li><a href="https://seu.edu.bd/">Southeast University </a></li>
+                                            <li><a href="https://uttarauniversity.edu.bd/">Uttara University </a></li>
+                                            <li><a href="https://www.easternuni.edu.bd/">Eastern University </a></li>
+                                            <li><a href="https://www.bubt.edu.bd/">BUBT</a></li>
+                                            <li><a href="https://www.primeasia.edu.bd/">Prime Asia University </a></li>
+                                            <li><a href="https://www.adust.edu.bd/#/">Atish Dipankar University </a></li>
+                                            <li><a href="https://diu.ac/">Dhaka International University</a></li>
+                                            <li><a href="https://nub.ac.bd/">Northern University </a></li>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                   
+                                </ul>
+                               
+                            
+                            </li>
+                            <li><a href="#">EEE  &raquo;</a>
+                                <ul>
+                                        <div class="scrollbar" id="style-default">
+                                            <div class="force-overflow"> 
+                                                <li><a href="http://www.northsouth.edu/">North South University</a></li></li>
+                                                <li><a href="https://www.bracu.ac.bd/">Brac University &raquo;</a></li>
+                                                <li><a href="https://www.aust.edu/">AUST &raquo;</a> 
+                                                <li><a href="http://www.iub.edu.bd/">IUB &raquo;</a></li>
+                                                <li><a href="https://www.ewubd.edu/">East West University &raquo;</a> </li>
+                                                <li><a href="https://www.uap-bd.edu/"> University of Asia Pasific &raquo;</a>  </li>
+                                                <li><a href="https://iubat.edu/">IUBAT University</a></li></li>
+                                                <li><a href="https://daffodilvarsity.edu.bd/">Daffodil International University &raquo;</a></li>
+                                                <li><a href="https://www.uiu.ac.bd/">United International University &raquo;</a></li>
+                                                <li><a href="https://diu.ac/">Dhaka International University</a></li>
+                                                <li><a href="https://nub.ac.bd/">Northern University </a>
+                                                    <li><a href="https://seu.edu.bd/">Southeast University </a></li>
+                                                    <li><a href="https://www.easternuni.edu.bd/">Eastern University </a></li>
+                                          </div>
+                                     </div>
+
+                               </ul>
+                            </li>
+                            
+                            <li><a href="#">Pharmecy &raquo;</a></li>
+                            <li><a href="#">Hospitality and Tourisum &raquo;</a></li>
+                            <li><a href="#">IPE &raquo;</a></li>
+                            <li><a href="#">Textile &raquo;</a></li>
+                            <li><a href="#">Nursing &raquo;</a></li>
+
+                        </div>
+                    </div>
+                        </ul>
+               
+
+                    </li>
+
+
+                    <li><a href="#">Services &raquo;</a>
+                        <ul>
+                            <li><a href="#">North South University</a></li>
+                            <li><a href="#">IUBAT University</a></li>
+                            <li><a href="#">Daffodil International University &raquo;</a>
+                         </ul>
+
+                    </li>
+                    <li><a href="#">Visitor Comments &raquo;</a>
+                    </li>
+                    <li><a href="Library Management frontpage.html">Home &raquo;</a>
+                    </li>
+                    <li><a href="#">About Us  &raquo;</a>
+                    </li>
+                    <li><a href="https://daffodilvarsity.edu.bd/">DIU Home &raquo;</a>
+                    </li>
+                    <li><a href="#">Location</a>
+                    </li>
+                 <!--  <li><a href="private University Inside.html">Subject Ways Budget And Priority University List &raquo;</a>
+                   -->       
+                        <!--<li><a href="#">univ-Loc</a>-->
+
+                </ul>
+               </div>
+   
+        </nav> 
+    
+    <section>
+                <div id ="slider-wrapper">
+                   <!--<img src="image/nemo.jpg"/>-->
+                  
+
+                                                                                                                   <div class="slider-wrapper theme-bar">
+                       <div id="slider" class="nivoSlider">
+                           <img src="image/Lib5.jpg" data-thumb="image/Lib5.jpg" alt="Silent Study Zone of General Section"title="Silent Study Zone of General Section" />
+                           <a href="http://dev7studios.com"><img src="image/Lib6.jpg" data-thumb="image/Brac.jpg" alt="Newspaper Zone" title="Newspaper Zone" /></a>
+                           <img src="image/Lib7.jpg" data-thumb="image/Lib7.jpg" alt="Group Study Zone" data-transition="slideInLeft" title="Group Study Zone"/>
+                           <img src="image/Lib8.jpg" data-thumb="image/Lib8.jpg" alt="Silent Study Zone" title="Silent Study Zone" />
+                           <img src="image/Lib9.jpg" data-thumb="image/Lib9.jpg" alt="Library Café and Mind Mapping Place" data-transition="slideInLeft" title="Library Café and Mind Mapping Place"/>
+                           <img src="image/Lib10.jpg" data-thumb="image/Lib10.jpg" alt="Northsouth University" title="His Excellency, Dr. Banshidhar Mishra, Honorable Ambassador, Embassy of Nepal in Bangladesh visits DIU Library." />
+                           <img src="image/Lib11.jpg" data-thumb="image/Lib11.jpg" alt="Inauguration of Bangabandhu and Liberation War Study Center" data-transition="slideInLeft" title="Inauguration of Bangabandhu and Liberation War Study Center"/>
+                           <img src="image/Lib12.jpg" data-thumb="image/Lib12.jpg" alt="Inauguration of Kabi Nazrul Eduplex" title="Inauguration of Kabi Nazrul Eduplex" />
+                           <img src="image/Lib13.jpg" data-thumb="image/Lib13.jpg" alt="Silent Study Zone" data-transition="slideInLeft" title="Silent Study Zone"/>
+                          
+                        </div>
+        
+                           <div id="htmlcaption" class="nivo-html-caption">
+                           <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+                       </div>
+                   </div>
+                </div>
+                  
+     </section>
+            
+        <div id="content-wrappper">
+            <div id ="content">
+                <article>
+                    <h2><u> Library Hours</u><br> </h2>
+                      <h1> <u>  During The Semester:&raquo;</u></h1>
+                       <p> 
+                        Sat to Thurs&raquo;<br>
+                        
+                        8.00 AM to 8.00 PM.<br>
+
+                        
+                        Friday
+                        
+                        8.00 AM to 4.00 PM</p>
+                        
+                       <h1><u> During Off Semester </u></h1>
+                        
+                      <p> <u> Sat to Thurs &raquo;</u>
+                        
+                        8.00 AM to 4.00 PM<br>
+                        
+                        Friday &raquo;<br>
+                        
+                        CLOSED
+                    </p> 
+                        
+                       
+                    
+                </article>
+            </div>
+      
+            <div id ="sidebar">
+                <aside>
+                    <h2><u>For Any Query Contact Us </u></h2>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Dial:01760954003</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Link-in</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+               
+        <footer>
+            <div id ="footer">
+                <p>&copy;All right reserved by <b>Hossain Ahammed</b> </p>
+            </div>
+        </footer>
+    </div>
+                
+            
+
+                <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+                <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+                <script type="text/javascript">
+                $(window).load(function() {
+                    $('#slider').nivoSlider();
+                });
+                </script> 
+             
+                <!-- Script for log in button-->
+
+                <script>
+                    function toggleLoginForm() {
+                        var loginForm = document.getElementById("loginForm");
+                        loginForm.style.display = loginForm.style.display === "block" ? "none" : "block";
+                        // Clear the input fields on each access
+                        document.querySelector('.login-dropdown-content input[type="text"]').value = '';
+                        document.querySelector('.login-dropdown-content input[type="password"]').value = '';
+                    }
+            
+                    function login() {
+                        //  login validation logic here
+                        var idNumber = document.querySelector('.login-dropdown-content input[type="text"]').value;
+                        var password = document.querySelector('.login-dropdown-content input[type="password"]').value;
+            
+                        // For demonstration purposes, we assume the login is successful if both fields are non-empty
+                        if (idNumber.trim() == '1234' && password.trim() == 'H1234') {
+                            alert('Login successful!');
+
+                            // Redirect to the new page after successful login
+                           window.location.href = 'Library Management .html';
+                        } else {
+                            alert('Invalid login information. Please try again.');
+                        }
+                    }
+
+                    function togglePasswordVisibility() {
+                            var passwordInput = document.getElementById("passwordInput");
+                            var showPasswordCheckbox = document.getElementById("showPassword");
+
+                            if (showPasswordCheckbox.checked) {
+                                passwordInput.type = "text";
+                            } else {
+                                passwordInput.type = "password";
+                            }
+                          }
+                    function resetForm() {
+                            // Clear the input fields
+                            document.querySelector('.login-dropdown-content input[type="text"]').value = '';
+                            document.querySelector('.login-dropdown-content input[type="password"]').value = '';
+                       }
+
+                </script>
+            
+
+</body>
+</html>
